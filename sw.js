@@ -3,13 +3,11 @@ const CACHE_NAME = 'workout-planner-v1';
 
 // List of files to cache
 const urlsToCache = [
-  '/',
-  '/index.html',
-  // You would add your CSS and JS files here if they were separate
-  // '/style.css',
-  // '/app.js',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png'
+  '.',
+  'index.html',
+  'manifest.json', // It's good practice to cache the manifest too
+  'icons/icon-192x192.png',
+  'icons/icon-512x512.png'
 ];
 
 // Install event: opens the cache and adds the core files
