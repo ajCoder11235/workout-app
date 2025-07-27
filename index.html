@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Workout Plan</title>
+
+    <!-- PWA Manifest Link -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Theme Color for Browser UI -->
+    <meta name="theme-color" content="#3498db">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .day {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .day-header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: -20px -20px 15px -20px;
+        }
+        h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        h3, h4 {
+            color: #2980b9;
+        }
+        h3 {
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        p.workout-guide {
+            color: #555;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background: #f9f9f9;
+            margin-bottom: 8px;
+            padding: 12px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border: 1px solid #eee;
+        }
+        .exercise-name {
+            flex-grow: 1;
+        }
+        .equipment {
+            font-style: italic;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .log-entry {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: auto;
+        }
+        .log-entry input[type="number"] {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .log-entry select {
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Weekly Workout Plan 📝</h1>
+
+    <!-- MONDAY -->
+    <div class="day">
+        <div class="day-header"><h2>Monday - Full Body Focus</h2></div>
+        <h3>Morning Warm-up (approx. 5-7 minutes)</h3>
+        <ul>
+            <li><span class="exercise-name">Child's Pose (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
+            <li><span class="exercise-name">Kneeling Hip Thrust (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+            <li><span class="exercise-name">Jumping Jacks (25 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
+            <li><span class="exercise-name">Plank (Hold for 25 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
+            <li><span class="exercise-name">Light arm/leg swings</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
+        </ul>
+        <h3>Workout</h3>
+        <p class="workout-guide">Perform 2 Sets of Each Exercise with 60-90 seconds rest between sets.</p>
+        <h4>Upper Body</h4>
+        <ul>
+            <li><span class="exercise-name">Arm Raises (15-20 reps) <span class="equipment">(Hand Weights)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option><option value="kg">kg</option><option value="lbs">lbs</option></select></div></li>
+            <li><span class="exercise-name">Push Ups (7-9 reps - modify on knees)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+            <li><span class="exercise-name">Rhomboid Pulls (15-20 reps) <span class="equipment">(Resistance Band)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+        </ul>
+        <h4>Lower Body</h4>
+        <ul>
+            <li><span class="exercise-name">Butt Bridge (15-20 reps) <span class="equipment">(Band around thighs)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+            <li><span class="exercise-name">Side Lying Leg Lifts (12-15 reps/side) <span class="equipment">(Ankle Weights/Band)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option><option value="kg">kg</option><option value="lbs">lbs</option></select></div></li>
+        </ul>
+        <h3>Cool-down (approx. 5-7 minutes)</h3>
+        <ul>
+            <li><span class="exercise-name">Cobra Stretch (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
+            <li><span class="exercise-name">Pelvic Tilt (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+            <li><span class="exercise-name">Bridge Hip Abduction (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+            <li><span class="exercise-name">Flipping Thighs (20 seconds per side)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
+            <li><span class="exercise-name">Up N Down (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
+        </ul>
+    </div>
+    <!-- Other days follow the same structure -->
+</div>
+
+<script>
+    // Register the Service Worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(err => {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        });
+    }
+</script>
+
+</body>
+</html>

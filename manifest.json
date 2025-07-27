@@ -1,0 +1,21 @@
+{
+  "name": "Weekly Workout Planner",
+  "short_name": "WorkoutApp",
+  "description": "A simple weekly workout planner that works offline.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#3498db",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
