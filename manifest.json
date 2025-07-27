@@ -8,12 +8,12 @@
   "theme_color": "#3498db",
   "icons": [
     {
-      "src": "icons/icon-192x192.png",
+      "src": "/workout-app/icons/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "icons/icon-512x512.png",
+      "src": "/workout-app/icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
