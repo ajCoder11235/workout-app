@@ -34,6 +34,37 @@
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
         }
+        .actions-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .actions-container button {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .actions-container button:active {
+            transform: scale(0.98);
+        }
+        #save-btn {
+            background-color: #27ae60; /* Green */
+        }
+        #save-btn:hover {
+            background-color: #229954;
+        }
+        #reset-btn {
+            background-color: #c0392b; /* Red */
+        }
+        #reset-btn:hover {
+            background-color: #a93226;
+        }
         .day {
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -117,7 +148,13 @@
 <div class="container">
     <h1>Weekly Workout Plan 📝</h1>
 
-    <div class="day">
+    <div class="actions-container">
+        <button id="save-btn">Save Data</button>
+        <button id="reset-btn">Reset Data</button>
+    </div>
+
+    <!-- MONDAY -->
+    <div id="monday" class="day">
         <div class="day-header"><h2>Monday - Full Body Focus</h2></div>
         <h3>Morning Warm-up (approx. 5-7 minutes)</h3>
         <ul>
@@ -127,7 +164,6 @@
             <li><span class="exercise-name">Plank (Hold for 25 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
             <li><span class="exercise-name">Light arm/leg swings</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
         </ul>
-        
         <h3>Workout</h3>
         <p class="workout-guide">Perform 2 Sets of Each Exercise with 60-90 seconds rest between sets.</p>
         <h4>Upper Body</h4>
@@ -141,7 +177,6 @@
             <li><span class="exercise-name">Butt Bridge (15-20 reps) <span class="equipment">(Band around thighs)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
             <li><span class="exercise-name">Side Lying Leg Lifts (12-15 reps/side) <span class="equipment">(Ankle Weights/Band)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option><option value="kg">kg</option><option value="lbs">lbs</option></select></div></li>
         </ul>
-
         <h3>Cool-down (approx. 5-7 minutes)</h3>
         <ul>
             <li><span class="exercise-name">Cobra Stretch (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
@@ -152,7 +187,8 @@
         </ul>
     </div>
 
-    <div class="day">
+    <!-- TUESDAY -->
+    <div id="tuesday" class="day">
         <div class="day-header"><h2>Tuesday - Upper Body & Core Focus</h2></div>
         <h3>Morning Warm-up (approx. 5-7 minutes)</h3>
         <ul>
@@ -160,7 +196,6 @@
             <li><span class="exercise-name">Frog Hip Thrust (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
             <li><span class="exercise-name">Light arm circles (10-15 each direction)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
         </ul>
-
         <h3>Workout</h3>
         <p class="workout-guide">Perform 2 Sets of Each Exercise with 60-90 seconds rest between sets.</p>
         <h4>Upper Body</h4>
@@ -177,7 +212,6 @@
         <ul>
             <li><span class="exercise-name">Abdominal Crunches (15-20 reps)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
         </ul>
-
         <h3>Cool-down (approx. 5-7 minutes)</h3>
         <ul>
             <li><span class="exercise-name">Cobra Stretch (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
@@ -188,7 +222,8 @@
         </ul>
     </div>
 
-    <div class="day">
+    <!-- WEDNESDAY -->
+    <div id="wednesday" class="day">
         <div class="day-header"><h2>Wednesday - Core & Lower Body Focus</h2></div>
         <h3>Morning Warm-up (approx. 5-7 minutes)</h3>
         <ul>
@@ -197,7 +232,6 @@
             <li><span class="exercise-name">Knee to Chest Stretch (25 seconds per leg)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
             <li><span class="exercise-name">Light leg swings (10 each direction)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
         </ul>
-        
         <h3>Workout</h3>
         <p class="workout-guide">Perform 2 Sets of Each Exercise with 60-90 seconds rest between sets.</p>
         <h4>Core</h4>
@@ -210,7 +244,6 @@
             <li><span class="exercise-name">Arm Scissors (20-25 reps) <span class="equipment">(Hand Weights)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option><option value="kg">kg</option><option value="lbs">lbs</option></select></div></li>
             <li><span class="exercise-name">Wide Arm Push Ups (5-7 reps)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
         </ul>
-
         <h3>Cool-down (approx. 5-7 minutes)</h3>
         <ul>
             <li><span class="exercise-name">Cobra Stretch (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
@@ -221,7 +254,8 @@
         </ul>
     </div>
     
-    <div class="day">
+    <!-- THURSDAY -->
+    <div id="thursday" class="day">
         <div class="day-header"><h2>Thursday - Lower Body & Core Focus</h2></div>
         <h3>Morning Warm-up (approx. 5-7 minutes)</h3>
         <ul>
@@ -229,7 +263,6 @@
             <li><span class="exercise-name">Pelvic Tilt (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
             <li><span class="exercise-name">Marching in place (30-60 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
         </ul>
-        
         <h3>Workout</h3>
         <p class="workout-guide">Perform 2 Sets of Each Exercise with 60-90 seconds rest between sets.</p>
         <h4>Lower Body</h4>
@@ -246,7 +279,6 @@
             <li><span class="exercise-name">Arm Circle Clockwise (25 seconds) <span class="equipment">(Hand Weights)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option><option value="kg">kg</option><option value="lbs">lbs</option></select></div></li>
             <li><span class="exercise-name">Inclined Push Ups (10-12 reps - use a counter)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
         </ul>
-
         <h3>Cool-down (approx. 5-7 minutes)</h3>
         <ul>
             <li><span class="exercise-name">Cobra Stretch (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
@@ -257,7 +289,8 @@
         </ul>
     </div>
 
-    <div class="day">
+    <!-- FRIDAY -->
+    <div id="friday" class="day">
         <div class="day-header"><h2>Friday - Full Body Mix & Mobility</h2></div>
         <h3>Morning Warm-up (approx. 5-7 minutes)</h3>
         <ul>
@@ -265,7 +298,6 @@
             <li><span class="exercise-name">Frog Hip Thrust (12-15 repetitions)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
             <li><span class="exercise-name">Light dynamic stretches (leg swings, torso twists)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
         </ul>
-        
         <h3>Workout</h3>
         <p class="workout-guide">Perform 2 Sets of Each Exercise with 60-90 seconds rest between sets.</p>
         <h4>Upper Body</h4>
@@ -282,7 +314,6 @@
         <ul>
             <li><span class="exercise-name">Thrusting (Hip Thrusts) (15-20 reps) <span class="equipment">(Band around thighs)</span></span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="reps">reps</option></select></div></li>
         </ul>
-        
         <h3>Cool-down (approx. 5-7 minutes)</h3>
         <ul>
             <li><span class="exercise-name">Cobra Stretch (Hold for 20-30 seconds)</span><div class="log-entry"><input type="number" placeholder="Log" aria-label="Log value"><select aria-label="Log unit"><option value="sec">sec</option></select></div></li>
@@ -299,7 +330,7 @@
     // Register the Service Worker
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            navigator.serviceWorker.register('/workout-app/sw.js')
                 .then(registration => {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 })
@@ -308,6 +339,89 @@
                 });
         });
     }
+
+    // --- Data Persistence Logic ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const STORAGE_PREFIX = 'workout-app-data-';
+        const saveBtn = document.getElementById('save-btn');
+        const resetBtn = document.getElementById('reset-btn');
+
+        // Function to create a unique ID for each input field
+        function getInputId(inputElement) {
+            const exerciseLi = inputElement.closest('li');
+            const dayDiv = inputElement.closest('.day');
+            if (!exerciseLi || !dayDiv) return null;
+
+            const dayId = dayDiv.id;
+            // Sanitize exercise name to create a stable key
+            const exerciseName = exerciseLi.querySelector('.exercise-name').textContent.trim().replace(/[^a-zA-Z0-9]/g, '-');
+            const inputType = inputElement.tagName.toLowerCase(); // 'input' or 'select'
+
+            return `${STORAGE_PREFIX}${dayId}-${exerciseName}-${inputType}`;
+        }
+
+        // --- SAVE ALL DATA ---
+        function saveAllData() {
+            const allInputs = document.querySelectorAll('.log-entry input, .log-entry select');
+            allInputs.forEach(inputElement => {
+                const id = getInputId(inputElement);
+                if (id) {
+                    localStorage.setItem(id, inputElement.value);
+                }
+            });
+            alert('Your workout data has been saved!');
+        }
+
+        // --- RESET ALL DATA ---
+        function resetAllData() {
+            if (!confirm('Are you sure you want to reset all logged data? This cannot be undone.')) {
+                return;
+            }
+
+            const numberInputs = document.querySelectorAll('.log-entry input[type="number"]');
+            numberInputs.forEach(inputElement => {
+                const id = getInputId(inputElement);
+                if (id) {
+                    // Remove the specific item from storage
+                    localStorage.removeItem(id);
+                }
+                // Clear the value in the input field
+                inputElement.value = '';
+            });
+
+            // Note: We also need to clear the select dropdowns from storage, but not their values on screen.
+            const selectInputs = document.querySelectorAll('.log-entry select');
+             selectInputs.forEach(inputElement => {
+                const id = getInputId(inputElement);
+                if (id) {
+                    localStorage.removeItem(id);
+                }
+            });
+            
+            alert('Your workout data has been reset.');
+        }
+
+        // --- LOAD DATA ---
+        function loadData() {
+            const allInputs = document.querySelectorAll('.log-entry input, .log-entry select');
+            allInputs.forEach(inputElement => {
+                const id = getInputId(inputElement);
+                if (id) {
+                    const savedValue = localStorage.getItem(id);
+                    if (savedValue !== null) {
+                        inputElement.value = savedValue;
+                    }
+                }
+            });
+        }
+
+        // Attach event listeners to the buttons
+        saveBtn.addEventListener('click', saveAllData);
+        resetBtn.addEventListener('click', resetAllData);
+
+        // Load all data when the app starts
+        loadData();
+    });
 </script>
 
 </body>
